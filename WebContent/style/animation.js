@@ -1,4 +1,4 @@
-//¶¯Ì¬ÏÔÊ¾Éú³ÉµÄËæ»úÊıµÄ·½·¨
+//åŠ¨æ€æ˜¾ç¤ºç”Ÿæˆçš„éšæœºæ•°çš„æ–¹æ³•
 function showNumberWithAnimation(generateX,generateY,generateNumber){
 	var gridNumber = $("#grid-number-"+generateX+"-"+generateY);
 	gridNumber.css("background-color",getGridNumberBackgroundColor(generateNumber));
@@ -13,7 +13,7 @@ function showNumberWithAnimation(generateX,generateY,generateNumber){
 	
 }
 
-//Ïò×óÒÆ¶¯¶¯»­
+//å‘å·¦ç§»åŠ¨åŠ¨ç”»
 function showMoveAnimation(fromX,fromY,toX,toY){
 	var gridNumber = $("#grid-number-"+fromX+"-"+fromY);
 	gridNumber.animate({
@@ -22,7 +22,7 @@ function showMoveAnimation(fromX,fromY,toX,toY){
 	},200);
 }
 
-//ÅĞ¶ÏÊÇ·ñ¿ÉÒÔÏò×óÒÆ¶¯µÄ·½·¨
+//åˆ¤æ–­æ˜¯å¦å¯ä»¥å‘å·¦ç§»åŠ¨çš„æ–¹æ³•
 function canMoveLeft(board){
 	for(var i=0;i<4;i++){
 		for(var j=0;j<4;j++){
@@ -36,7 +36,7 @@ function canMoveLeft(board){
 	return false;
 }
 
-//Ïò×óÒÆµÄÊ±ºòÅĞ¶Ï×ó±ßÊÇ·ñÓĞÊı×ÖÊÇ·ñ¿ÉÒÔÏò×óÒÆ¶¯
+//å‘å·¦ç§»çš„æ—¶å€™åˆ¤æ–­å·¦è¾¹æ˜¯å¦æœ‰æ•°å­—æ˜¯å¦å¯ä»¥å‘å·¦ç§»åŠ¨
 function noBlokHorizontalCol(row,col1,col2,board){
 	for(var i=col1+1;i<col2;i++){
 		if(board[row][i]!=0){
@@ -46,7 +46,7 @@ function noBlokHorizontalCol(row,col1,col2,board){
 	return true;
 }
 
-//ÅĞ¶ÏÊÇ·ñ¿ÉÒÔÏòÉÏÒÆ¶¯µÄ·½·¨
+//åˆ¤æ–­æ˜¯å¦å¯ä»¥å‘ä¸Šç§»åŠ¨çš„æ–¹æ³•
 function canMoveUp(board){
 	for(var i=1;i<4;i++){
 		for(var j=0;j<4;j++){
@@ -60,7 +60,7 @@ function canMoveUp(board){
 	return false;
 }
 
-//ÏòÉÏÒÆ¶¯µÄÊ±ºòÅĞ¶ÏÉÏ±ßÊÇ·ñÓĞÊı×Ö¿ÉÒÔÏòÉÏÒÆ¶¯µÄ·½·¨
+//å‘ä¸Šç§»åŠ¨çš„æ—¶å€™åˆ¤æ–­ä¸Šè¾¹æ˜¯å¦æœ‰æ•°å­—å¯ä»¥å‘ä¸Šç§»åŠ¨çš„æ–¹æ³•
 function noBlokHorizontalRow(row1,row2,col,board){
 	for(var i=row1+1;i<row2;i++){
 		if(board[i][col]!=0){
@@ -70,7 +70,7 @@ function noBlokHorizontalRow(row1,row2,col,board){
 	return true;
 }
 
-//ÅĞ¶ÏÊÇ·ñ¿ÉÒÔÏòÓÒÒÆ¶¯µÄ·½·¨
+//åˆ¤æ–­æ˜¯å¦å¯ä»¥å‘å³ç§»åŠ¨çš„æ–¹æ³•
 function canMoveRight(board){
 	for(var i=0;i<4;i++){
 		for(var j=2;j>=0;j--){
@@ -84,7 +84,7 @@ function canMoveRight(board){
 	return false;
 }
 
-//ÅĞ¶ÏÊÇ·ñ¿ÉÒÔÏòÏÂÒÆ¶¯µÄ·½·¨·½·¨
+//åˆ¤æ–­æ˜¯å¦å¯ä»¥å‘ä¸‹ç§»åŠ¨çš„æ–¹æ³•æ–¹æ³•
 function canMoveDown(board){
 	for(var i=2;i>=0;i--){
 		for(var j=0;j<4;j++){

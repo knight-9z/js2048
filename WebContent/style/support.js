@@ -1,15 +1,15 @@
 
-//小方格距离头部的间距
+//灏忔柟鏍艰窛绂诲ご閮ㄧ殑闂磋窛
 function getPosTop(i,j){
 	return 20+120*i;
 }
 
-//小方格距离左部的间距
+//灏忔柟鏍艰窛绂诲乏閮ㄧ殑闂磋窛
 function getPosLeft(i,j){
 	return 20+120*j;
 }
 
-//设置动态生成数字的背景颜色
+//璁剧疆鍔ㄦ�佺敓鎴愭暟瀛楃殑鑳屾櫙棰滆壊
 function getGridNumberBackgroundColor(generateNumber){
 	switch(generateNumber){
 		case 2:return "#eee4da";break;
@@ -28,7 +28,7 @@ function getGridNumberBackgroundColor(generateNumber){
 	}
 }
 
-//不同的数字设置不同的字体颜色
+//涓嶅悓鐨勬暟瀛楄缃笉鍚岀殑瀛椾綋棰滆壊
 function getGridNumberColor(generateNumber){
 	if(generateNumber<=4){
 		return "#776e65";
